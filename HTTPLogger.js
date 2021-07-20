@@ -1,6 +1,6 @@
 const Events = require("events")
 const zmq = require("zeromq")
-const {parse, stringify, toJSON, fromJSON} = require('flatted');
+const {stringify} = require('flatted');
 let pusher = zmq.socket("push");
 
 pusher.bindSync("tcp://127.0.0.1:3000");
